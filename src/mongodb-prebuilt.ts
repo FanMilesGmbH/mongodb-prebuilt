@@ -20,7 +20,7 @@ export class MongoDBPrebuilt {
   }
 
   getHomeDirectory(): string {
-    let homeDir: string = resolvePath(osHomeDir(), '.mongodb-prebuilt');
+    let homeDir: string = process.env.MONGODB_PREBUILD_DOWNLOAD_DIR || resolvePath(osHomeDir(), '.mongodb-prebuilt');
     this.debug(`getHomeDirectory(): ${homeDir}`);
     return homeDir;
   }

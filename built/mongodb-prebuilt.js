@@ -16,7 +16,7 @@ var MongoDBPrebuilt = /** @class */ (function () {
         }
     }
     MongoDBPrebuilt.prototype.getHomeDirectory = function () {
-        var homeDir = path_1.resolve(os_1.homedir(), '.mongodb-prebuilt');
+        var homeDir = process.env.MONGODB_PREBUILD_DOWNLOAD_DIR || path_1.resolve(os_1.homedir(), '.mongodb-prebuilt');
         this.debug("getHomeDirectory(): " + homeDir);
         return homeDir;
     };
