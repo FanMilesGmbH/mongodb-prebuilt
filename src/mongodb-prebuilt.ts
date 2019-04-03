@@ -8,23 +8,23 @@ import {MongoDBDownload} from '@fanmiles/mongodb-download';
 export class MongoDBPrebuilt {
   private debug: any;
   private binPath: string;
-  
+
   constructor(public mongoDBDownload?: MongoDBDownload) {
     this.debug = Debug('mongodb-prebuilt-MongoDBPrebuilt');
-    
+
     if (this.mongoDBDownload === undefined) {
       this.mongoDBDownload = new MongoDBDownload({
         downloadDir: this.getHomeDirectory()
       });
-    } 
+    }
   }
-  
+
   getHomeDirectory(): string {
     let homeDir: string = resolvePath(osHomeDir(), '.mongodb-prebuilt');
     this.debug(`getHomeDirectory(): ${homeDir}`);
     return homeDir;
   }
-  
+
   getBinPath(): Promise<string> {
     return new Promise<string>((resolve, reject) => {
       if ( this.binPath !== undefined ) {
@@ -40,7 +40,7 @@ export class MongoDBPrebuilt {
       })
     });
   }
-  
+
   private resolveBinPath(extractLocation: string): Promise<string> {
     return new Promise<string>((resolve, reject) => {
       let binPath: string = `${extractLocation}/*/bin`;
@@ -60,7 +60,7 @@ export class MongoDBPrebuilt {
       });
     });
   }
-  
+
   private hasValidBinPath(files: string[]): boolean {
     if ( files.length === 1 ) {
       return true;
@@ -70,8 +70,8 @@ export class MongoDBPrebuilt {
     } else {
       this.debug(`getBinPath() doesn't exist, files: ${files}`);
       return false;
-    }    
+    }
   }
-  
+
 }
 

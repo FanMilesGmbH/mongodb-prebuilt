@@ -9,4 +9,4 @@ mongoBin.run().then(function () {
 }, function (e) {
     console.error("unable to launch " + COMMAND, e);
 });
-//# sourceMappingURL=/Users/alex/Fanmiles/git/mongodb-prebuilt/bin/mongod.js.map
+//# sourceMappingURL=../../src/bin/mongod.js.map

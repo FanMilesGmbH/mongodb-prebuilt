@@ -74,4 +74,4 @@ var MongodHelper = /** @class */ (function () {
     return MongodHelper;
 }());
 exports.MongodHelper = MongodHelper;
-//# sourceMappingURL=/Users/alex/Fanmiles/git/mongodb-prebuilt/mongod-helper.js.map
+//# sourceMappingURL=../src/mongod-helper.js.map

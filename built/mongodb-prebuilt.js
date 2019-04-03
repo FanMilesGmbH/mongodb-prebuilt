@@ -74,4 +74,4 @@ var MongoDBPrebuilt = /** @class */ (function () {
     return MongoDBPrebuilt;
 }());
 exports.MongoDBPrebuilt = MongoDBPrebuilt;
-//# sourceMappingURL=/Users/alex/Fanmiles/git/mongodb-prebuilt/mongodb-prebuilt.js.map
+//# sourceMappingURL=../src/mongodb-prebuilt.js.map

@@ -71,4 +71,4 @@ var MongoBins = /** @class */ (function () {
     return MongoBins;
 }());
 exports.MongoBins = MongoBins;
-//# sourceMappingURL=/Users/alex/Fanmiles/git/mongodb-prebuilt/mongo-bins.js.map
+//# sourceMappingURL=../src/mongo-bins.js.map
